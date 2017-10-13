@@ -50,7 +50,7 @@
 		<!-- automatic scan domain package -->
 		<property name="packagesToScan">
 			<list>
-				<value>au.edu.sydney.domain</value>
+				<value>au.edu.elec5619.domain</value>
 			</list>
 		</property>
 	</bean>
