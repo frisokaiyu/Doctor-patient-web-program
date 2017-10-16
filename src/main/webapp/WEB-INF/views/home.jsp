@@ -63,14 +63,8 @@ your weight(kg):<input type="text" name="weight"><br>
   Your BMI(body Mass Index):<input type="text" name="BMI">
 </form>
 
-	
-	height: <input type="text" name="height" id = "height">
-	weight: <input type="text" name="weight" id = "weight">
-	
-	low blood pressure: <input type="text" name="lowBloodPressure" id = "lowBloodPressure">
-	high blood pressure: <input type="text" name="highBloodPressure" id = "highBloodPressure">
-	symptom:<input type="text" name="sympotm" id = "sympotm">
-	<button id="diagnosis">diagnosis</button>
+symptom:<input type="text" name="sympotm" id = "sympotm">
+<button id="diagnosis">diagnosis</button>
 	
 	
 	
@@ -87,11 +81,6 @@ search: <input type="text" name="search" id="searchContent">
 	
 	
 	
-	
-	
-	
-	
-	
 <form>
 	user name: <input type="text" name="username">
 	password: <input type="text" name="password">
@@ -103,5 +92,8 @@ search: <input type="text" name="search" id="searchContent">
   			}
 	</script>
 </body>
+
+<ul id ="list">
+</ul>
 
 </html>

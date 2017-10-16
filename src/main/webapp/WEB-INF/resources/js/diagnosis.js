@@ -1,14 +1,8 @@
 $(document).ready(function(){
-	$("#diagnosis").click(function(){
-		
-		
-		var height = ("#height").val()
-		var weight = ("#weight").val()
-		var lowBloodPressure = ("#height").val()
-		var highBloodPressure = ("#height").val()
+	$("#search").click(function(){
 			
 		$.ajax({
-			url:"disease/"+$("#searchContent").val(),
+			url:"symptom/"+$("#sympotm").val(),
 		    type: "GET", 
 		    dataType:"json",
 		    headers: {
@@ -24,15 +18,14 @@ $(document).ready(function(){
 		    	$("#list").append(name)
 		    	$("#list").append(cause)
 		    	$("#list").append(symptom)
-		    	$("#list").append(precaution)
+		    	$("#list").append(precaution);
 		    	$("#list").append(treatment)
 		    }, 
 		    error: function() {
 		    	$("#list").find("li").remove(); 
-		    	var error = $("<li>"+"disease is not found"+"</li>")
-		    	$("#list").append(error)
-		    }
-		});
+		    	var error = $("<li>"+"disease is not found"+"</li>");
+		    	$("#list").append(error);
+		    }});
 			})
 		}
 	

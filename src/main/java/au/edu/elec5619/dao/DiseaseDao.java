@@ -30,4 +30,12 @@ public class DiseaseDao {
 		Disease disease = (Disease)query.uniqueResult();
         return disease;
     }
+
+	public Disease getDiseaseBySymptom(String name) {
+    	String hql = "from Disease as p where p.symptom like '%"+":name"+" %' ";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setString("name", name);
+		Disease disease = (Disease)query.uniqueResult();
+        return disease;
+	}
 }

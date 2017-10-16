@@ -33,13 +33,18 @@ public class PatientService {
     	patientDao.savePatient(patient);
     }
     
-    public void registerPatient(Patient patient){
+    public boolean register(Patient patient){
     	if(patientDao.getPatientByUsername(patient.getUsername())!=null)
-    	{ 
-    	}	
+    		return false;
     	else
     	{
     		patientDao.savePatient(patient);
+    		return true;
     	}
     }
+
+	public Disease getDiseaseBySymptom(String name) {
+    	Disease disease = diseaseDao.getDiseaseBySymptom(name);
+    	return disease;
+	}
 }

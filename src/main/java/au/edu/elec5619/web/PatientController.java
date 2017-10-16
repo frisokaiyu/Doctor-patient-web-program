@@ -39,23 +39,27 @@ public class PatientController {
     binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
     }
     
-    @RequestMapping(value = "disease/{diseaseName}", method = RequestMethod.GET)
-    public @ResponseBody Disease getDiseaseByName(@PathVariable("diseaseName") String name){
-    	Disease disease = patientService.getDiseaseByName(name);
-    	System.out.println(disease);
-    	return disease;
-    }
-    
     @RequestMapping(value = "patient/{patientUserName}", method = RequestMethod.GET)
-    public @ResponseBody Patient getPatientByName(@PathVariable("patientUserName") String username){
-    	Patient patient = patientService.getPatientByUsername(username);	
+    public Patient getPatientByName(@PathVariable("patientUserName") String username){
+    	Patient patient = patientService.getPatientByUsername(username);
     	return patient;
     }
     
 	@RequestMapping(value = "patients", method = RequestMethod.POST)
-	public String registerPatient(@ModelAttribute Patient patient) {
-		patientService.registerPatient(patient);
+	public String register(@ModelAttribute Patient patient) {
+
+		System.out.println(patient);
+		if(patientService.register(patient))
+		{
+			System.out.println("register succeed");
+		}	
+		else 
+		{
+			System.out.println("user name has been used");
+		}
 		return "home";
+			
+		
 	}
 	
 }

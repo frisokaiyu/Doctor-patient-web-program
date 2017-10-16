@@ -18,15 +18,14 @@ $(document).ready(function(){
 		    	$("#list").append(name)
 		    	$("#list").append(cause)
 		    	$("#list").append(symptom)
-		    	$("#list").append(precaution)
+		    	$("#list").append(precaution);
 		    	$("#list").append(treatment)
 		    }, 
 		    error: function() {
 		    	$("#list").find("li").remove(); 
-		    	var error = $("<li>"+"disease is not found"+"</li>")
-		    	$("#list").append(error)
-		    }
-		});
+		    	var error = $("<li>"+"disease is not found"+"</li>");
+		    	$("#list").append(error);
+		    }});
 			})
 		}
 	
