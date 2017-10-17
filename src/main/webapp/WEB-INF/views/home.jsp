@@ -1,8 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
-<script src="<c:url value="/resources/js/search.js" />"></script>
-<script src="<c:url value="/resources/js/diagnosis.js" />"></script>
+<script src=<c:url value="/resources/js/search.js" />></script>
+<script src=<c:url value="/resources/js/diagnosis.js" />></script>
 <html>
 
 <head>
