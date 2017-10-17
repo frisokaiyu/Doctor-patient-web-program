@@ -86,9 +86,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div id="small-dialog" class="mfp-hide">
 									<div class="search-top">
 										<div class="login_pop">
-											<form action="#" method="post">
+											<form action="http://localhost:8080/elec5619/disease" method="get">
 												<input type="submit" value="">
-												<input type="text" name="Type something..." value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+												<input type="text" name="diseasename" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
 											</form>
 										</div>				
 									</div>
@@ -467,14 +467,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									
 									<div class="login-right">
 										<h3>Sign in with your account</h3>
-										<form action="#" method="post">
+										<form action="http://localhost:8080/elec5619/login" method="post">
 											<div class="sign-in">
 												<h4>User name :</h4>
-												<input type="text" name="Type here" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
+												<input type="text" name="username" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
 											</div>
 											<div class="sign-in">
 												<h4>Password :</h4>
-												<input type="password" name="Password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+												<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
 												<a href="#">Forgot password?</a>
 											</div>
 											<div class="single-bottom">
@@ -494,6 +494,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 <!-- //login -->
+
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>
 </html>

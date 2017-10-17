@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="login">
 				<ul>
 					<li><a href="#" data-toggle="modal" data-target="#myModal4"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Login</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#myModal5"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Signup</a></li>
+					<li><a href="/elec5619/registration"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Signup</a></li>
 					<li>
 						<div class="search-bar">
 							<div class="search">		
@@ -71,9 +71,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div id="small-dialog" class="mfp-hide">
 									<div class="search-top">
 										<div class="login_pop">
-											<form action="#" method="post">
+											<form action="http://localhost:8080/elec5619/disease" method="get">
 												<input type="submit" value="">
-												<input type="text" name="Type something..." value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+												<input type="text" name="diseasename" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
 											</form>
 										</div>				
 									</div>
@@ -146,8 +146,112 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //banner -->
 <div class="typrography">
 	 <div class="container">
-	      <h3 class="tittle">Short Codes</h3>
+	      <h3 class="tittle">Diagnosis</h3>
 			<div class="grid_3 grid_4 wow fadeInLeft animated" data-wow-delay=".5s">
+			
+			<h3 class="bars">Forms</h3>
+			<script>
+			
+			
+  var BMI={};
+ BMI.getBMI=function(a,b){
+    var bmi=b/((a/100)*(a/100));
+    return bmi;
+  };
+  BMI.idealweight=function(a){
+    var x=(a-100)*0.9;
+    return x;
+  };
+  function calculate(form){
+    var a=eval(form.height.value);
+    var b=eval(form.weight.value);
+    var bmi=eval(form.BMI.value);
+    var bmiValue =BMI.getBMI(a,b);
+    BMI.disp_alert(bmiValue );
+    form.IW.value=BMI.idealweight(a);
+    form.BMI.value= bmiValue ;
+  }
+  BMI.disp_alert = function(bmi){
+    if (bmi < 18.5)
+    {
+      alert("you are so slim, treat yourself");
+    }
+    else if (bmi >= 18.5 && bmi < 25)
+    {
+      alert("your weight is normal, keep going");
+    }
+    else if (bmi >= 25 && bmi< 30)
+    {
+      alert("you are overweight, please be careful");
+    }
+    else
+    {
+      alert("dude, lose weight!!!");
+    }
+  }
+</script>
+<form id="bmiForm" method="POST">
+<div class="input-group">
+  <span class="input-group-addon" id="height">Height(cm)</span>
+  <input type="text" class="form-control" placeholder="only number" aria-describedby="basic-addon1" name = "height">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="weight">Weight(kg)</span>
+  <input type="text" class="form-control" placeholder="only number" aria-describedby="basic-addon1" name = "weight">
+</div>
+
+
+<div class="input-group">
+  <span class="input-group-addon" id="ideal weight" >Your ideal weight</span>
+  <input type="text" class="form-control" aria-describedby="basic-addon1" name ="IW">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="ideal weight" >Your BMI(body Mass Index):</span>
+  <input type="text" class="form-control" aria-describedby="basic-addon1" name="BMI">
+</div>
+
+<button class="btn btn-default" type="button" onclick="calculate(this.form)">start to calculate!</button>
+</form>
+
+
+		   <h3 class="bars">Unordered List</h3>
+		<ul class="list-group">
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		</ul>
+
+
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+  <span class="input-group-addon" id="basic-addon2">Your BMI(body Mass Index):</span>
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon">$</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-addon">.00</span>
+</div>
+<div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon2">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+</div>
+
+<div class="input-group input-group-sm">
+  <span class="input-group-addon" id="sizing-addon3">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+</div>
+
 		     <h3 class="bars">Headings</h3>
 		     <div class="bs-example">
 				<div class=" mb-60">
@@ -500,37 +604,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<li class="list-group-item1">Porta ac consectetur ac</li>
 			<li class="list-group-item1">Vestibulum at eros</li>
 		</ol>
-<h3 class="bars">Forms</h3>
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-</div>
 
-<div class="input-group">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-  <span class="input-group-addon" id="basic-addon2">@example.com</span>
-</div>
-
-<div class="input-group">
-  <span class="input-group-addon">$</span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <span class="input-group-addon">.00</span>
-</div>
-<div class="input-group input-group-lg">
-  <span class="input-group-addon" id="sizing-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
-</div>
-
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon2">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
-</div>
-
-<div class="input-group input-group-sm">
-  <span class="input-group-addon" id="sizing-addon3">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
-</div>
-
+<!--left form-->
 <div class="row">
   <div class="col-lg-6 in-gp-tl">
     <div class="input-group">
@@ -800,14 +875,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									
 									<div class="login-right">
 										<h3>Sign in with your account</h3>
-										<form action="#" method="post">
+										<form action="http://localhost:8080/elec5619/login" method="post">
 											<div class="sign-in">
-												<h4>Email :</h4>
-												<input type="text" name="Type here" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
+												<h4>User name :</h4>
+												<input type="text" name="username" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
 											</div>
 											<div class="sign-in">
 												<h4>Password :</h4>
-												<input type="password" name="Password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+												<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
 												<a href="#">Forgot password?</a>
 											</div>
 											<div class="single-bottom">
@@ -827,45 +902,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 <!-- //login -->
-<!-- login -->
-			<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" >
-				<div class="modal-dialog" role="document">
-					<div class="modal-content modal-info">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						</div>
-						<div class="modal-body modal-spa">
-							<div class="login-grids">
-									<div class="login-bottom">
-										<h3>Sign up for free</h3>
-										<form action="#" method="post">
-											<div class="sign-up">
-												<h4>Email :</h4>
-												<input type="text" name="Type here" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
-											</div>
-											<div class="sign-up">
-												<h4>Password :</h4>
-												<input type="password" name="Password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
-											</div>
-											<div class="sign-up">
-												<h4>Re-type Password :</h4>
-												<input type="password" name="Password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
-											</div>
-											<div class="sign-up">
-												<input type="submit" value="REGISTER NOW" >
-											</div>
-											
-										</form>
-									</div>
-								<p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- //login -->
+
 
 </body>
 </html>

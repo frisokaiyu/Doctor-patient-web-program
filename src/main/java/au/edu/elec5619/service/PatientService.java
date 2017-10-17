@@ -47,4 +47,9 @@ public class PatientService {
     	Disease disease = diseaseDao.getDiseaseBySymptom(name);
     	return disease;
 	}
+
+	public Patient login(String username, String password) {
+		Patient patient = patientDao.getPatientByUsernameAndPassword(username,password);
+		return patient;
+	}
 }

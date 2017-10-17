@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Infirmary a Medical Category Flat Bootstrap Responsive Website Template | Contact :: w3layouts</title>
+<title>Infirmary a Medical Category Flat Bootstrap Responsive Website Template | Short Codes :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -128,9 +128,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav menu__list">
 							<li class="menu__item "><a href="index" class="menu__link">Home</a></li>
 							<li class="menu__item"><a href="about" class="menu__link">About</a></li> 
-							<li class="menu__item "><a href="diagnosis" class="menu__link">Diagnosis</a></li> 
+							<li class="menu__item menu__item--current"><a href="diagnosis" class="menu__link">Diagnosis</a></li> 
 							<li class="menu__item"><a href="gallery" class="menu__link">Gallery</a></li> 
-							<li class="menu__item menu__item--current"><a href="contact" class="menu__link">Contact</a></li>
+							<li class="menu__item "><a href="contact" class="menu__link">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -144,37 +144,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </div>
 <!-- //banner -->
-<div class="map_contact">
-	<div class="container">
-		
-		<h3 class="tittle">Contact</h3>
-		<div class="contact-grids">
-			
-			<div class="col-md-6 contact-grid ">
-				<form action="#" method="post">
-					<input type="text" name="Name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-					<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-					<textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-					<input type="submit" value="Send" >
-				</form>
-			</div>
-			<div class="col-md-6 contact-left-map ">
-				<p>"Lorem Ipsum"is the common name dummy text often used in the design, printing, and type setting industriescommon name dummy text often used in the design, printing, and type setting industries Lorem Ipsum"is the common name dummy text often used in the design, printing, and type setting industries "</p>
-				<ul class="contact-list">
-					<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>756 global Place, New York.</li>
-					<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:example@mail.com">mail@example.com</a></li>
-					<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+123 2222 222</li>
-				</ul>
-			</div>						
-			<div class="clearfix"> </div>
+<div class="typrography">
+	 <div class="container">
+	      <h3 class="tittle">searchResult</h3>
+			<div class="grid_3 grid_4 wow fadeInLeft animated" data-wow-delay=".5s">
+
+		<h3 class="bars">Result</h3>
+		<ul class="list-group">
+		  <li class="list-group-item">Disease name: ${requestScope.disease.name}</li>
+		  <li class="list-group-item">Cause: ${requestScope.disease.cause}</li>
+		  <li class="list-group-item">Symptom: ${requestScope.disease.symptom}</li>
+		  <li class="list-group-item">precaution: ${requestScope.disease.precaution}</li>
+		  <li class="list-group-item">treatment: ${requestScope.disease.treatment}</li>
+		</ul>
+
+
+
+		<div class="col-md-6 contact-left wow fadeInRight animated animated" data-wow-delay="0.4s">
+			<h2>Information</h2>
+			<div class="strip"></div>
+			<p class="para">At vero eos et accusamus et iusto odio dignissimos
+			ducimus qui blanditiis praesentium voluptatum deleniti at
+			que corrupti quos dolores et quas molestias excepturi sint
+			occaecati cupiditate non provident, similique sunt.</p>
+			<p class="copy-right">© 2016 Infirmary. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 		</div>
-		<h3 class="tittle">View On map</h3>
-		<div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.0196028042633!2d151.1881803151014!3d-33.88914898065066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1d4ab9ef1d9%3A0x1d017d69037a07c0!2sThe+University+of+Sydney!5e0!3m2!1sen!2sau!4v1508208043704" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
+		<div class="clearfix"></div>
 	</div>
 </div>
-<!-- //contact -->
 <!-- contact -->
 <div class="contact">
 	<div class="container">
@@ -253,6 +250,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 <!-- //login -->
+
 
 </body>
 </html>

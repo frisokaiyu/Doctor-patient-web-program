@@ -34,4 +34,14 @@ public class PatientDao {
     	sessionFactory.getCurrentSession().save(patient);
    
     }
+
+	public Patient getPatientByUsernameAndPassword(String username, String password) {
+
+    	String hql = "from Patient as p where p.username=:username and p.password =:password";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setString("username", username);
+		query.setString("password", password);
+		Patient patient = (Patient)query.uniqueResult();
+        return patient;
+	}
 }

@@ -7,12 +7,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import au.edu.elec5619.domain.Disease;
+import au.edu.elec5619.domain.Patient;
 import au.edu.elec5619.service.PatientService;
 /**
  * Handles requests for the application home page.
@@ -38,11 +41,11 @@ public class HomeController {
 		return name;
 	}
 	
-    @RequestMapping(value = "disease/{diseaseName}", method = RequestMethod.GET)
-    public @ResponseBody Disease getDiseaseByName(@PathVariable("diseaseName") String name){
+    @RequestMapping(value = "disease", method = RequestMethod.GET)
+    public String getDiseaseByName(@RequestParam("diseasename") String name,ModelMap map){
     	Disease disease = patientService.getDiseaseByName(name);
-    	System.out.println(disease);
-    	return disease;
+    	map.addAttribute("disease", disease);
+    	return "searchResult";
     }    
     @RequestMapping(value = "symptom/{symptom}", method = RequestMethod.GET)
     public @ResponseBody Disease getDiseaseBySymptom(@PathVariable("symptom") String name){
@@ -51,4 +54,17 @@ public class HomeController {
     	return disease;
     }
 	
+    @RequestMapping(value = "login", method = RequestMethod.POST)
+    public String login(@RequestParam ("username") String username,@RequestParam ("password") String password){
+    	Patient patient = patientService.login(username,password);
+    	if(patient!=null)
+    	{
+    		System.out.println("login succeed");
+    	}
+    	else
+    	{
+    		System.out.println("login fail");
+    	}
+    	return "contact";
+    }
 }
