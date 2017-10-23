@@ -223,8 +223,6 @@ public class PatientController {
 		JSONObject json = new JSONObject();
 		String firstname = request.getParameter("firstname");
        	String lastname = request.getParameter("lastname");
-       	System.out.println(lastname);
-       	System.out.println(patient.getLastname());
        	String ageStr = request.getParameter("age");
        	int age = Integer.parseInt(ageStr);
        	String bloodtype = request.getParameter("bloodtype");
