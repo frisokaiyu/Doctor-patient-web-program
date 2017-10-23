@@ -35,7 +35,7 @@ public class Patient implements Serializable {
     private String lastname;
 	
 	@Column(name="age")
-    private int age;
+    private Integer age;
 	
 	@Column(name="gender")
     private String gender;
@@ -49,6 +49,12 @@ public class Patient implements Serializable {
 	
 	@Column(name="email")
     private String email;
+	
+	@Column(name="bloodtype")
+    private String bloodtype;
+	
+	@Column(name="illnessdesc")
+    private String illnessdesc;
 
 	public Patient() {
 		super();
@@ -94,11 +100,11 @@ public class Patient implements Serializable {
 		this.lastname = lastname;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
@@ -133,12 +139,29 @@ public class Patient implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public String getBloodtype() {
+		return bloodtype;
+	}
+
+	public void setBloodtype(String bloodtype) {
+		this.bloodtype = bloodtype;
+	}
+
+	public String getIllnessdesc() {
+		return illnessdesc;
+	}
+
+	public void setIllnessdesc(String illnessdesc) {
+		this.illnessdesc = illnessdesc;
+	}
 
 	@Override
 	public String toString() {
 		return "Patient [id=" + id + ", username=" + username + ", password=" + password + ", firstname=" + firstname
 				+ ", lastname=" + lastname + ", age=" + age + ", gender=" + gender + ", birthday=" + birthday
-				+ ", phone=" + phone + ", email=" + email + "]";
+				+ ", phone=" + phone + ", email=" + email + ", bloodtype=" + bloodtype + ", illnessdesc=" + illnessdesc
+				+ "]";
 	}
-	
+
 }

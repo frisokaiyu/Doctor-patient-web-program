@@ -6,6 +6,7 @@ $(document).ready(function(){
 			    url:"patients/",
 			    type:"POST",    
 			    async:true,
+			    dataType:"json",
 			    data:{"username":$("#username").val(),
 				    "password":$("#password").val(),
 				    "firstname":$("#firstname").val(),
@@ -14,17 +15,27 @@ $(document).ready(function(){
 				    "gender":$('input:radio:checked').val(),
 				    "birthday":$("#birthday").val(),
 				    "phone":$("#phone").val(),
-				    "email":$("#email").val()},    
+				    "email":$("#email").val(),
+				    "bloodtype":$("#bloodtype").val(),
+				    "illnessdesc":$("#illnessdesc").val()},    
 			    beforeSend:function(){
 			    },
-			    success:function(){
-			    	alert("register succeed")
-			    	window.location.href="/elec5619/"
+			    success:function(response){
+			    	var result = response.msg;
+			    	if(result=="registered")
+			    	{
+				    	alert("register succeed")
+				    	window.location.href="http://localhost:8080/elec5619/"
+			    	}
+			    	else
+			    	{
+			    		alert("user name has been used")
+			    	}
 			    },
 			    complete:function(){
 			    },
 			    error:function(response){
-			    	alert("user name has been used")
+			    	
 			    								
 			    }
 					})

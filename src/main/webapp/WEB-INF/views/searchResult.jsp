@@ -1,14 +1,15 @@
+<%@ page contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
-<title>Infirmary a Medical Category Flat Bootstrap Responsive Website Template | Short Codes :: w3layouts</title>
+<title>Medical system</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -117,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  </button>
 					<div class="logo grid">
 						<div class="grid__item color-3">
-							<h1><a class="link link--nukun" href="index.html"><i></i>INFI<span>R</span>MARY</a></h1>
+							<h1><a class="link link--nukun"><i></i>Medical System</a></h1>
 						</div>
 					</div>
 				</div>
@@ -128,9 +129,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav menu__list">
 							<li class="menu__item "><a href="index" class="menu__link">Home</a></li>
 							<li class="menu__item"><a href="about" class="menu__link">About</a></li> 
-							<li class="menu__item menu__item--current"><a href="diagnosis" class="menu__link">Diagnosis</a></li> 
-							<li class="menu__item"><a href="gallery" class="menu__link">Gallery</a></li> 
-							<li class="menu__item "><a href="contact" class="menu__link">Contact</a></li>
+							<li class="menu__item"><a href="diagnosis" class="menu__link">Diagnosis</a></li> 
 						</ul>
 					</nav>
 				</div>
@@ -158,59 +157,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		  <li class="list-group-item">treatment: ${requestScope.disease.treatment}</li>
 		</ul>
 
-
-
-		<div class="col-md-6 contact-left wow fadeInRight animated animated" data-wow-delay="0.4s">
-			<h2>Information</h2>
-			<div class="strip"></div>
-			<p class="para">At vero eos et accusamus et iusto odio dignissimos
-			ducimus qui blanditiis praesentium voluptatum deleniti at
-			que corrupti quos dolores et quas molestias excepturi sint
-			occaecati cupiditate non provident, similique sunt.</p>
-			<p class="copy-right">© 2016 Infirmary. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-		</div>
-		<div class="clearfix"></div>
-	</div>
 </div>
-<!-- contact -->
-<div class="contact">
-	<div class="container">
-		
-		<div class="col-md-6 contact-right wow fadeInLeft animated animated" data-wow-delay="0.4s">
-			<h3>Contact Us</h3>
-			<div class="strip"></div>
-			<ul class="con-icons">
-				<li><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>+123 456 7890</li>
-				<li><a href="mailto:info@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>info@example.com</a></li>
-			</ul>
-			<ul class="fb_icons">
-				<li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
-				<li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
-				<li class="hvr-rectangle-out"><a class="goog" href="#"></a></li>
-				<li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
-				<li class="hvr-rectangle-out"><a class="drib" href="#"></a></li>
-			</ul>
-			<h3>Newsletter Sign up</h3>
-			<div class="strip"></div>
-			<form action="#" method="post">
-				<input type="text" name="Name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-				<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-		<div class="col-md-6 contact-left wow fadeInRight animated animated" data-wow-delay="0.4s">
-			<h2>Information</h2>
-			<div class="strip"></div>
-			<p class="para">At vero eos et accusamus et iusto odio dignissimos
-			ducimus qui blanditiis praesentium voluptatum deleniti at
-			que corrupti quos dolores et quas molestias excepturi sint
-			occaecati cupiditate non provident, similique sunt.</p>
-			<p class="copy-right">© 2016 Infirmary. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //contact -->
 <!-- login -->
 			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
 				<div class="modal-dialog" role="document">
@@ -223,14 +170,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									
 									<div class="login-right">
 										<h3>Sign in with your account</h3>
-										<form action="http://localhost:8080/elec5619/login" method="post">
+										<form action="<%=path %>/login" method="post">
 											<div class="sign-in">
 												<h4>User name :</h4>
 												<input type="text" name="username" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
 											</div>
 											<div class="sign-in">
 												<h4>Password :</h4>
-												<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+												<input type="password" name="password"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+												<input type="radio" name="type" value="1" checked="checked">patient<input type="radio" name="type" value="2">doctor
+												<br>
 												<a href="#">Forgot password?</a>
 											</div>
 											<div class="single-bottom">

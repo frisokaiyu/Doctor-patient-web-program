@@ -120,11 +120,38 @@
 							</tr>
 							<tr>
 								<td class="label">
+									<label id="lbloodtype" for="bloodtype">Blood Type</label>
+								</td>
+								<td class="field">
+									<input id="bloodtype" name="bloodtype" type="text" value="" maxlength="150">
+								</td>
+								<td class="status"></td>
+							</tr>
+							<tr>
+								<td class="label">
+									<label id="lillnessdesc" for="illnessdesc">Illness Description</label>
+								</td>
+								<td class="field">
+									<textarea rows="10" cols="50" id="illnessdesc" name="illnessdesc"></textarea>
+								</td>
+								<td class="status"></td>
+							</tr>
+							<tr>
+								<td class="label">
 									<label id="lsignupsubmit" for="signupsubmit">Sign up</label>
 								</td>
-								<td class="field" colspan="2">
+								<td class="field" colspan="1">
 									<input id="signupsubmit" name="signup" type="button" value ="submit">
 								</td>
+								<td class="field" colspan="1">
+									<input id="return" name="return" type="button" value ="return" onclick="returnFunction()">
+								</td>
+								
+								<script>
+								function returnFunction() {
+									window.location.href="http://localhost:8080/elec5619/";
+								}
+								</script>
 							</tr>
 						</table>
 					</form>

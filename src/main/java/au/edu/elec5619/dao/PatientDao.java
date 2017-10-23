@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
+import au.edu.elec5619.domain.Doctor;
 import au.edu.elec5619.domain.Patient;;
 
 @Repository(value = "PatientDao")
@@ -29,6 +30,14 @@ public class PatientDao {
 		Patient patient = (Patient)query.uniqueResult();
         return patient;
     }
+    
+    public Patient getPatientById(String id){
+    	String hql = "from Patient as p where p.id=:id";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setString("id", id);
+		Patient patient = (Patient)query.uniqueResult();
+        return patient;
+    }
     public void savePatient(Patient patient) {
   
     	sessionFactory.getCurrentSession().save(patient);
@@ -44,4 +53,11 @@ public class PatientDao {
 		Patient patient = (Patient)query.uniqueResult();
         return patient;
 	}
+	
+	public void updatePatient(Patient patient) {
+  	  
+    	sessionFactory.getCurrentSession().update(patient);
+   
+    }
+
 }

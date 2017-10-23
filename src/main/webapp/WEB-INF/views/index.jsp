@@ -1,14 +1,15 @@
+<%@ page contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
-<title>Infirmary a Medical Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Medical system</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -64,7 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- header -->
-<div class="header wow zoomIn">
+<div class="header">
 	<div class="container">
 		<div class="header_left" data-wow-duration="2s" data-wow-delay="0.5s">
 			<ul>
@@ -84,7 +85,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 								<div id="small-dialog" class="mfp-hide">
-									<div class="search-top">
+									<div class="
+-top">
 										<div class="login_pop">
 											<form action="http://localhost:8080/elec5619/disease" method="get">
 												<input type="submit" value="">
@@ -132,7 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  </button>
 					<div class="logo grid">
 						<div class="grid__item color-3">
-							<h1><a class="link link--nukun" href="index.html"><i></i>INFI<span>R</span>MARY</a></h1>
+							<h1><a class="link link--nukun"><i></i>Medical System</a></h1>
 						</div>
 					</div>
 				</div>
@@ -144,8 +146,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="menu__item menu__item--current"><a href="index" class="menu__link">Home</a></li>
 							<li class="menu__item"><a href="about" class="menu__link">About</a></li> 
 							<li class="menu__item"><a href="diagnosis" class="menu__link">Diagnosis</a></li> 
-							<li class="menu__item"><a href="gallery" class="menu__link">Gallery</a></li> 
-							<li class="menu__item"><a href="contact" class="menu__link">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -217,7 +217,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
 								adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et 
 								dolore magnam aliquam quaerat voluptatem.</p>
-								<a href="#book" class="hvr-outline-out button2 scroll">Book an appointment</a>
 							</div>
 						</div>
 					</div>
@@ -232,7 +231,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
 								adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et 
 								dolore magnam aliquam quaerat voluptatem.</p>
-								<a href="#book" class="hvr-outline-out button2 scroll">Book an appointment</a>
+								
 							</div>
 						</div>
 					</div>
@@ -241,91 +240,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="clearfix"></div>
 </div>
-<!-- services -->
-<div class="services">
-	<div class="container">
-		<div class="col-md-4 services_left wow bounceInDown" data-wow-duration="1.5s" data-wow-delay="0s">
-			<h3>Our Best Services</h3>
-			<p class="ser-para" >Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-				sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
-			<a href="about.html" class="hvr-outline-out button2">See More About Us</a>
-				<script>
-						// You can also use "$(window).load(function() {"
-						$(function () {
-						 // Slideshow 4
-						$("#slider4").responsiveSlides({
-							auto: true,
-							pager: true,
-							nav: false,
-							speed: 500,
-							namespace: "callbacks",
-							before: function () {
-						$('.events').append("<li>before event fired.</li>");
-						},
-						after: function () {
-							$('.events').append("<li>after event fired.</li>");
-							}
-							});
-						});
-				</script>
-			<div  class="callbacks_container">
-				<ul class="rslides" id="slider4">
-					<li>
-						<div class="ser-bottom">
-							<h5>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-							sed quia consequuntur magni dolores eos qui </h5>
-							<p>- Alia Smith</p>
-						</div>
-					</li>
-					<li>
-						<div class="ser-bottom">
-							<h5>Voluptas sit aspernatur aut odit aut fugit,sed quia consequuntur magni dolores 
-							eos qui ratione voluptatem sequi nesciunt</h5>
-							<p>- Thompson</p>
-						</div>
-					</li>
-					<li>
-						<div class="ser-bottom">
-							<h5>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-							sed quia consequuntur magni dolores eos qui </h5>
-							<p>- Federic</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="col-md-8 services_right ">
-			<div class="list-left text-center wow bounceInDown" data-wow-duration="1.5s" data-wow-delay="0.1s">
-				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-				<h4>Voluptatem</h4>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-					sed quia consequuntur magni dolores eos qui</p>
-			</div>
-			<div class="list-left text-center wow bounceInDown" data-wow-duration="1.5s" data-wow-delay="0.2s">
-				<span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>
-				<h4>Voluptatem</h4>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-					sed quia consequuntur magni dolores eos qui</p>
-			</div>
-			<div class="list-left text-center no_marg wow bounceInDown" data-wow-duration="1.5s" data-wow-delay="0.3s">
-				<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-				<h4>Voluptatem</h4>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-					sed quia consequuntur magni dolores eos qui</p>
-			</div>
-			<div class="list-left text-center no_marg wow bounceInDown" data-wow-duration="1.5s" data-wow-delay="0.4s">
-				<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-				<h4>Voluptatem</h4>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-					sed quia consequuntur magni dolores eos qui</p>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //services -->
 <!-- team -->
 <div class="ind-team">
 	<div class="container">
@@ -384,77 +298,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <!-- team -->
-<!-- capabilities -->
-<div class="capacity">
-	<div class="container">
-		<h3>Capabilities</h3>
-		<div class="col-md-3 capabil_grid1 wow fadeInDownBig animated animated text-center" data-wow-delay="0.4s">
-			<div class="capil_text">
-				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='5700' data-delay='.5' data-increment="100">5700</div>
-				<p>Happy Patients</p>	
-			</div>
-		</div>
-		<div class="col-md-3 capabil_grid2 wow fadeInUpBig animated animated text-center" data-wow-delay="0.4s">
-			<div class="capil_text">
-				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1700' data-delay='.5' data-increment="5">1700</div>
-				<p>Our Staff</p>	
-			</div>
-		</div>
-		<div class="col-md-3 capabil_grid3 wow fadeInDownBig animated animated text-center" data-wow-delay="0.4s">
-			<div class="capil_text">
-				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='0021' data-delay='.5' data-increment="100">0021</div>				
-				<p>Foundation</p>
-			</div>
-		</div>
-		<div class="col-md-3 capabil_grid4 wow fadeInUpBig animated animated text-center" data-wow-delay="0.4s">
-			<div class="capil_text">
-				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='2500' data-delay='.5' data-increment="1">2500</div>
-				<p>Clients</p>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //capabilities -->
-<!-- contact -->
-<div class="contact">
-	<div class="container">
-		
-		<div class="col-md-6 contact-right wow fadeIn animated animated" data-wow-delay="0.1s" data-wow-duration="2s">
-			<h3>Contact Us</h3>
-			<div class="strip"></div>
-			<ul class="con-icons">
-				<li><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>+123 456 7890</li>
-				<li><a href="mailto:info@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>info@example.com</a></li>
-			</ul>
-			<ul class="fb_icons">
-				<li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
-				<li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
-				<li class="hvr-rectangle-out"><a class="goog" href="#"></a></li>
-				<li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
-				<li class="hvr-rectangle-out"><a class="drib" href="#"></a></li>
-			</ul>
-			<h3>Newsletter Sign up</h3>
-			<div class="strip"></div>
-			<form action="#" method="post">
-				<input type="text" name="Name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-				<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-		<div class="col-md-6 contact-left wow fadeIn animated animated" data-wow-delay="0.1s" data-wow-duration="2s">
-			<h2>Information</h2>
-			<div class="strip"></div>
-			<p class="para">At vero eos et accusamus et iusto odio dignissimos
-			ducimus qui blanditiis praesentium voluptatum deleniti at
-			que corrupti quos dolores et quas molestias excepturi sint
-			occaecati cupiditate non provident, similique sunt.</p>
-			<p class="copy-right">© 2016 Infirmary. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
-<!-- //contact -->
+
 <!-- login -->
 			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
 				<div class="modal-dialog" role="document">
@@ -467,14 +311,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									
 									<div class="login-right">
 										<h3>Sign in with your account</h3>
-										<form action="http://localhost:8080/elec5619/login" method="post">
+										<form action="<%=path %>/login" method="post">
 											<div class="sign-in">
 												<h4>User name :</h4>
 												<input type="text" name="username" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
 											</div>
 											<div class="sign-in">
 												<h4>Password :</h4>
-												<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+												<input type="password" name="password"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+												<input type="radio" name="type" value="1" checked="checked">patient<input type="radio" name="type" value="2">doctor
+												<br>
 												<a href="#">Forgot password?</a>
 											</div>
 											<div class="single-bottom">
