@@ -3,7 +3,7 @@ Medical Appointment System is an online medical booking system based on SpringMV
 
 # PreView
 Login page
-<img src="/image/Login.PNG" alt="Login.PNG"/>
+![](<img src="/image/Login.PNG" alt="Login.PNG"/>)
 Patient Info
 <img src="/image/Patient_info.PNG" alt="Patient_info.PNG"/>
 Appointment page
