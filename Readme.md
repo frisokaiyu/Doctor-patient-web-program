@@ -2,7 +2,7 @@
 Medical Appointment System is an online medical booking system based on SpringMVC + Hibernate + Spring
 
 # PreView
-Login page
+Login page        
 ![Login.PNG](https://bytebucket.org/elec5619_2017MedApptSys/medicalappointmentsystem/raw/80bdcfb6cc8606c77c848931f23f5b61dc4d8a22/image/Login.png?token=b4351b3070ca6532b90b65a51ec749b8a939a400)
 Patient Info
 <img src="/image/Patient_info.png" alt="Patient_info.png"/>
