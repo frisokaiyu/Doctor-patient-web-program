@@ -329,14 +329,15 @@ public class PatientController {
 			    //if(checkFieldPropertyExists(bean,obj.toString())){
     				Class cls = PropertyUtils.getPropertyType(bean, obj.toString());
     				Object beanValue = ConvertUtils.convert(request.getParameter(obj.toString()), cls);
-    				if(obj.toString().trim().equals("createTime")){
-    				    String cr = request.getParameter(obj.toString().trim());
-    				    System.out.println(obj.toString()+"    "+cr);
-    				    System.out.println("isnotnull    "+convertStringNull(cr+"").length());
-    				    PropertyUtils.setProperty(bean, obj.toString().trim(), beanValue);
-    				}
+//    				if(obj.toString().trim().equals("createTime")){
+//    				    String cr = request.getParameter(obj.toString().trim());
+//    				    System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!___________________________________________________________________");
+//    				    System.out.println(obj.toString()+"    "+cr);
+//    				    System.out.println("isnotnull    "+convertStringNull(cr+"").length());
+//    				    PropertyUtils.setProperty(bean, obj.toString().trim(), beanValue);
+//    				}
     				if(convertStringNull(beanValue+"").length()>0){
-    				    PropertyUtils.setProperty(bean, obj.toString().trim(), beanValue);
+    					PropertyUtils.setProperty(bean, obj.toString().trim(), beanValue);
     				}
 			    //}
 			} catch (Exception e) {
