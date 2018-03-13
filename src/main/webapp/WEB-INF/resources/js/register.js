@@ -25,7 +25,7 @@ $(document).ready(function(){
 			    	if(result=="registered")
 			    	{
 				    	alert("register succeed")
-				    	window.location.href="http://localhost:8080/elec5619/"
+				    	window.location.href="/"
 			    	}
 			    	else
 			    	{

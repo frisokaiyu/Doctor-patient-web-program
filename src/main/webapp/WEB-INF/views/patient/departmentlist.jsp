@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<td><h4>Department Name</h4></td>
 				<td><h4>Description</h4></td>
 			</tr>
-			<c:forEach var="department" items="${departmentList }">
+			<c:forEach var="department" items="${departmentList}">
 				<tr>
 					<td><a href="appointPat?departmentid=${department.id }&date=${date}">${department.name }</a></td>
 					<td>${department.description }</td>

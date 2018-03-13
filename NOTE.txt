@@ -1,0 +1,4 @@
+该版本为AWS版本
+本地和AWS版本：
+注意修改dababase文件下，username，password 以及host
+在本地运行时，registration.jsp和register.js需要修改返回路径为 /elec5619/

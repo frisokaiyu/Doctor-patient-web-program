@@ -149,7 +149,7 @@
 								
 								<script>
 								function returnFunction() {
-									window.location.href="http://localhost:8080/elec5619/";
+									window.location.href="/";
 								}
 								</script>
 							</tr>

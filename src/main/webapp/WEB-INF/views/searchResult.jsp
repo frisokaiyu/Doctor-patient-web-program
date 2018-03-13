@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div id="small-dialog" class="mfp-hide">
 									<div class="search-top">
 										<div class="login_pop">
-											<form action="http://localhost:8080/elec5619/disease" method="get">
+											<form action="/elec5619/disease" method="get">
 												<input type="submit" value="">
 												<input type="text" name="diseasename" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
 											</form>

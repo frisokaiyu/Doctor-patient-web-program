@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="login">
 				<ul>
 					<li><a href="#" data-toggle="modal" data-target="#myModal4"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Login</a></li>
-					<li><a href="/elec5619/registration"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Signup</a></li>
+					<li><a href="registration"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Signup</a></li>
 					<li>
 						<div class="search-bar">
 							<div class="search">		
@@ -71,7 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div id="small-dialog" class="mfp-hide">
 									<div class="search-top">
 										<div class="login_pop">
-											<form action="http://localhost:8080/elec5619/disease" method="get">
+											<form action="disease" method="get">
 												<input type="submit" value="">
 												<input type="text" name="diseasename" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
 											</form>
